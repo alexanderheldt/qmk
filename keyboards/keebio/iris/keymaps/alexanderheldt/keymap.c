@@ -4,6 +4,7 @@
 #include QMK_KEYBOARD_H
 #include "keymap_swedish.h"
 
+#define TAPPING_TERM 200
 
 #define _QWERTY 0
 #define _LOWER 1
