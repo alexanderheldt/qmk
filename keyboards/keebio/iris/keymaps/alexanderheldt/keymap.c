@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+#include "keymap_swedish.h"
+
 
 #define _QWERTY 0
 #define _LOWER 1
@@ -46,6 +48,17 @@ tap_dance_action_t tap_dance_actions[] = {
   [TD_WS_0]  = ACTION_TAP_DANCE_DOUBLE(LGUI(KC_0), LSG(KC_0)),
 };
 
+#define HR_A LGUI_T(KC_A)
+#define HR_S LALT_T(KC_S)
+#define HR_D LSFT_T(KC_D)
+#define HR_F LCTL_T(KC_F)
+#define HR_G LT(_SYM, KC_G)
+#define HR_H LT(_SYM, KC_H)
+#define HR_J RCTL_T(KC_J)
+#define HR_K RSFT_T(KC_K)
+#define HR_L RALT_T(KC_L)
+#define HR_O RGUI_T(SE_ODIA)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT(
@@ -54,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    SE_ARNG,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    LT(_SYM, KC_G),            LT(_SYM, KC_H),   KC_J,    KC_K,    KC_L,    SE_ODIA, SE_ADIA,
+     KC_ESC,  HR_A,    HR_S,    HR_D,    HR_F,    HR_G,                               HR_H,    HR_J,    HR_K,    HR_L,    HR_O,    SE_ADIA,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    MO(_WM),          MO(_WM), KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_MINS, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
