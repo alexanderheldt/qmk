@@ -57,7 +57,8 @@ tap_dance_action_t tap_dance_actions[] = {
 #define WS_8 TD(TD_WS_8)
 #define WS_9 TD(TD_WS_9)
 #define WS_0 TD(TD_WS_0)
-#define WM_CLOSE LGUI(KC_ESC) // closes active window in WM
+#define WM_LOCK LGUI(KC_X)	// closes active window in WM
+#define WM_CLOSE LGUI(KC_ESC)	// locks screen
 
 #define HR_A LGUI_T(KC_A)
 #define HR_S LALT_T(KC_S)
@@ -102,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_WM] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     _______, WS_1,    WS_2,    WS_3,    WS_4,    WS_5,                               WS_6,    WS_7,    WS_8,    WS_9,    WS_0,    _______,
+     WM_LOCK, WS_1,    WS_2,    WS_3,    WS_4,    WS_5,                               WS_6,    WS_7,    WS_8,    WS_9,    WS_0,    _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
