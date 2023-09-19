@@ -72,7 +72,7 @@ tap_dance_action_t tap_dance_actions[] = {
 #define HR_H LT(_SYM, KC_H)
 #define HR_J RCTL_T(KC_J)
 #define HR_K RSFT_T(KC_K)
-#define HR_L RALT_T(KC_L)
+#define HR_L LALT_T(KC_L)
 #define HR_O RGUI_T(SE_ODIA)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
