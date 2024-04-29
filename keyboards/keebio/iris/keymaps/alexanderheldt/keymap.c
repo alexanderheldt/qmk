@@ -7,10 +7,10 @@
 #define TAPPING_TERM 200
 
 #define _QWERTY 0
-#define _SYM 1
-#define _WM 2
-#define _CTR 3
-#define _WIN 4
+#define _WIN 1
+#define _SYM 2
+#define _WM 3
+#define _CTR 4
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -146,9 +146,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    HR_G,                               HR_H,    KC_J,    KC_K,    KC_L,    KC_O,    SE_ADIA,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,          MO(_WM), KC_N,    KC_M,    KC_COMM, KC_DOT,  _______, _______,
+     KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,          _______, KC_N,    KC_M,    KC_COMM, KC_DOT,  _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────
-                                    MO(_CTR), KC_BSPC, KC_ENT,                   KC_ENT,  KC_SPC,  _______
+                                    MO(_CTR), KC_SPC, KC_ENT,                    KC_ENT,  KC_BSPC,  _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   )
 };
